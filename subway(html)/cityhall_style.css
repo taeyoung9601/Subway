@@ -1,0 +1,311 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+.sm_body {
+    width: 100vw;
+    height: 80vh;
+
+    display: block;
+
+    left: 0;
+    top: 0;
+    position: relative;
+    background: url('./img/back_city.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    isolation: isolate;
+}
+
+/* .sm_body::after {
+    content: '';
+    position: absolute;
+    background: white;
+    z-index: -1;
+    inset: 0;
+    opacity: 0.4;
+} */
+.ch_section {
+    height: inherit;
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+.col_div1 {
+    width: 19vw;
+    margin: 1vh 0;
+}
+.col_div2 {
+    width: 55vw;
+    padding-top: 1vh;
+
+    display: inline-flex;
+    flex-flow: row wrap;
+}
+
+.snull {
+    padding-left: 70px;
+}
+.text h2 {
+    /* padding-top: 13%; */
+    text-align: center;
+}
+.text ul {
+    margin: 20px 15%;
+    padding: 0;
+}
+
+input {
+    position: absolute;
+    visibility: hidden;
+}
+label {
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+circle_1: 서울광장
+circle_2: 미술관
+*/
+.circle {
+    perspective: 75vw;
+}
+.vertical_page {
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(circle at 0% 100%, rgb(255, 255, 169), #fff 70%);
+    outline: 2px solid black;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, .15);
+    transition: z-index .01s linear 1s, transform 1s linear;
+    z-index: 5;
+}
+.circle img {
+    width: 100%;
+    height: 100%;
+}
+input:checked + .vertical_page .front {
+    opacity: 0;
+}
+input:checked + .vertical_page .back {
+    opacity: 1;
+}
+
+/***** circle_1: 서울광장 *****/
+.circle_1 .text {
+    width: 39vh;
+    height: 39vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.8rem;
+    border-radius: 50%;
+}
+#book_1_page {
+    width: 39vh;
+    height: 39vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    transform-origin: 0% 100%;
+    overflow: hidden;
+}
+
+.circle_1 .front,
+.circle_1 .back {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    transition: opacity .1s linear .5s, z-index .5s linear .5s;
+}
+.circle_1 .front {
+    opacity: 1;
+}
+.circle_1 .back {
+    transform: scaleY(-1);
+}
+.circle_1 input:checked + .vertical_page {
+    transform: rotateX(-180deg);
+}
+
+
+
+/***** circle_2: 미술관 *****/
+.circle_2 .text {
+    width: 39vh;
+    height: 39vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 39vh;
+    font-size: 0.8rem;
+
+    border-radius: 50%;
+}
+#book_4_page {
+    width: 39vh;
+    height: 39vh;
+    position: absolute;
+    left: 0;
+    top: 39vh;
+    border-radius: 50%;
+    transform-origin: 0% 0%;
+    overflow: hidden;
+}
+
+.circle_2 .front,
+.circle_2 .back {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    transition: opacity .1s linear .5s, z-index .5s linear .5s;
+}
+
+.circle_2 .front {
+    opacity: 1;
+}
+.circle_2 .back {
+    transform: scaleY(-1);
+}
+.circle_2 input:checked + .vertical_page {
+    transform: rotateX(180deg);
+}
+
+
+
+/*
+square_1: 덕수궁
+square_2: 정계천
+*/
+.square {
+    width: 100%;
+    height: 38vh;
+
+    perspective: 75vw;
+}
+.horizontal_page {
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 20%, #fff, rgb(253, 124, 189)  150%);
+    outline: 2px solid black;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, .15);
+    transition: z-index .01s linear 1s, transform 1s linear;
+    z-index: 5;
+}
+.square img {
+    width: 100%;
+    height: 100%;
+}
+input:checked + .horizontal_page .front {
+    opacity: 0;
+}
+input:checked + .horizontal_page .back {
+    opacity: 1;
+}
+
+/***** square_1: 덕수궁 *****/
+.square_1 .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+#book_2_page {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform-origin: 0% 0%;
+}
+.square_1 .front,
+.square_1 .back {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    transition: opacity .1s linear .5s, z-index .5s linear .5s;
+}
+.square_1 .front {
+    opacity: 1;
+}
+.square_1 .back {
+    transform: scaleX(-1);
+}
+.square_1 input:checked+.horizontal_page {
+    transform: rotateY(-180deg);
+}
+
+/***** square_2: 정계천 *****/
+.square_2 .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 0%;
+    top: 0;
+}
+#book_3_page {
+    position: absolute;
+    left: 0%;
+    top: 0;
+    transform-origin: 100% 50%;
+}
+.square_2 .front,
+.square_2 .back {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    transition: opacity .1s linear .5s, z-index .5s linear .5s;
+}
+.square_2 .front {
+    opacity: 1;
+}
+.square_2 .back {
+    transform: scaleX(-1);
+}
+.square_2 input:checked+.horizontal_page {
+    transform: rotateY(180deg);
+}
+
+
+

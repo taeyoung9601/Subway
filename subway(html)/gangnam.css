@@ -1,0 +1,162 @@
+.YJ {
+position: relative;
+display: block;
+
+left: 0;
+top: 0;
+
+width: 100vw;
+height: 80vh;
+
+margin: 0; 
+padding: 0;
+
+/* background-image: url(./img/gangnam_img_6.jpeg);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-size: 100%; */
+}
+
+/* front div 배경 이미지 */
+.front_traffic {
+    background-image: url(./img/gangnam_img_2.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.front_food{
+    background-image: url(./img/gangnam_img_3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.front_night {
+    background-image: url(./img/gangnam_img_4.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.front_beauty {
+    background-image: url(./img/gangnam_img_5.png);
+    background-size: cover;
+    background-position: center;
+}
+
+/* 뒤집기 */
+
+.gangnam_1,
+.gangnam_2,
+.gangnam_3,
+.gangnam_4 {
+    display: block;
+    transition: transform 0.5s;
+    transform: rotateY(0deg);
+
+    background-size: cover;
+}
+
+.gangnam_1:hover,
+.gangnam_2:hover,
+.gangnam_3:hover,
+.gangnam_4:hover {
+    transform: rotateY(180deg);
+}
+
+.back_traffic,
+.back_food,
+.back_night,
+.back_beauty {
+    position: absolute;
+    width: 100%;
+    transform: rotateY(180deg);
+    background-color: white;
+    opacity: 0.8;
+}
+
+.gangnam_1,
+.gangnam_2,
+.gangnam_3,
+.gangnam_4 {
+    display: inline-block;
+    transition: transform 0.3s;
+    transform: perspective(800px) rotateY(0deg);
+    transform-style: preserve-3d;
+}
+  
+.gangnam_1 > * ,
+.gangnam_2 > * ,
+.gangnam_3 > * ,
+.gangnam_4 > * {
+    backface-visibility: hidden;
+}
+
+/* 합치기 */
+
+.gangnam_1,
+.gangnam_2,
+.gangnam_3,
+.gangnam_4  {
+    display: inline-grid;
+    transition: transform 0.3s;
+    transform: perspective(800px) rotateY(0deg);
+    transform-style: preserve-3d;
+}
+  
+.gangnam_1 > * ,
+.gangnam_2 > * ,
+.gangnam_3 > * ,
+.gangnam_4 > * {
+    margin: 10px;
+    grid-area: 1 / 1 / 1 / 1;
+    width: 510px;
+    height: 30vh;
+    padding: 15px;
+    backface-visibility: hidden;
+}
+
+
+/* 위치 */
+
+
+
+.gangnam_1 {
+    position: absolute;
+    top : 5%;
+    left: 20%;
+}
+
+.gangnam_2 {
+    position: absolute;
+    top : 5%;
+    left: 53%;
+}
+
+.gangnam_3 {
+    position: absolute;
+    right: 14%;
+    top: 50%;
+}
+.gangnam_4 {
+    position: absolute;
+    right: 47%;
+    top: 50%;
+}
+
+.traffic_h2,
+.food_h2,
+.night_h2,
+.beauty_h2 {
+    background-color: white;
+    opacity: 0.7;
+    width: 50%;
+}
+
+.traffic_p,
+.food_p,
+.night_p,
+.beauty_p {
+    /* margin-top: 30%; */
+    word-break: keep-all;
+} 
+

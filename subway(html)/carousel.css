@@ -1,0 +1,141 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  font-size: 2vh;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* 현재 내가 보고 있는 화면 */
+.window { 
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+}
+
+/* 모든 컨텐츠의 합의 크기 */
+.container {
+  position: relative;
+  
+  /* 컨텐츠 수만큼 곱하기 */
+  width: 808vw; 
+  height: 80vh;
+  
+  left: -100vw;
+}
+
+/* 각 컨텐츠의 크기 */
+.cell {
+  display: inline-flex;
+  width: 100vw;
+  background: url('./img/back_city.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  pointer-events: auto;
+}
+
+/* 버튼 박스 */
+.button-container {
+  display: flex;
+  height: 20vh;
+
+  /* 좌우 위치 */
+  justify-content: center;
+  /* 상하 위치 */
+  align-items: center;
+  gap: 1%;
+
+  background-image: url('./img/bottom_img.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+button {
+  font-size: 30px;
+
+  height: 50px;
+  width: 50px;
+  color: #1f1f1f;
+  background-color: rgba(0, 0, 0, 0);
+
+  border-radius: 50%;
+  border: none;
+  cursor: auto;
+  transition: background-color 0.5s linear, color 0.5s linear;
+}
+
+button:hover {
+  color: white;
+  background-color: #1f1f1f;
+}
+
+button:hover i{
+  transform: rotateX(180deg);
+  transition: transform 0.5s linear;
+}
+
+.window_train {
+  width: 35%;
+  height: 70%;
+
+  overflow: hidden;
+
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-color: white;
+
+  border: .5px solid #00A84D;
+  border-radius: 10px;
+  box-shadow: inset 5px 5px 10px 0px rgba(0,0,0,0.3);
+}
+
+.green_line {
+  width: 35%;  
+  height: 5px;
+  position: fixed;
+
+  background-color: #00A84D;
+  border: none;
+}
+
+.container_subway {
+  position: absolute;
+
+  /* 컨텐츠 수만큼 곱하기 */
+  width: 600%; 
+  max-height: 60%;
+
+  /* 컨텐츠 수만큼 곱하기 */
+  left: -77.5vw;
+}
+
+.subway{
+  display: inline-block;
+
+  width: 7vw;
+  margin: 0 5.5vw;
+  padding: 0.7vw;
+
+  border: 5px solid #00A84D ;
+  border-radius: 30px;
+  background-color: white;
+
+  text-align: center;
+  font-weight: 600;
+}

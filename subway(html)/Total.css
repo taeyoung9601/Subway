@@ -1,0 +1,240 @@
+.Total { 
+  background-image: url('./img/back_city.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80vh;
+}
+
+.Total_back{
+  width: 100vw;
+  height: 80vh;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.top {
+  position: absolute; 
+  display: flex;
+
+  width: 100%;
+  height: 50%;
+
+  top: 2%;
+  justify-content: space-around;
+}
+
+.bottom {
+  position: absolute; 
+  display: flex;
+
+  width: 100%;
+
+  bottom: 2%;
+  justify-content: center;
+}
+
+
+
+.Kali{
+  display: inline-grid;
+  
+  text-align: center;
+
+  perspective: 800px;
+}
+
+.Kali > * {
+  grid-area: 1 / 1 / 1 / 1;
+  backface-visibility: hidden;
+
+  a{
+      color: blue;
+      text-decoration: none;
+  } 
+}
+
+.Kali .front{
+  transition: transform 0.3s ease-out;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;  
+
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.5);
+    
+  border: 1px solid black;
+
+  img{
+    width: 20vw;
+    height: 36vh;
+  }
+}
+
+.Kali:hover .front{
+  transform: rotateY(-180deg);
+}
+
+.Kali .back{
+  font-size: 0.8rem;
+  transition: transform 0.3s ease-out;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;  
+
+  background-color: rgba(255, 255, 255, 0.5);
+
+  border: 1px solid black;
+
+    img{
+        width: 20vw;
+        height: 32vh;
+    }
+}
+
+.Kali:hover .back{
+  transform: rotateY(0deg);
+}
+
+
+
+.SmallWorld{
+  display: inline-grid;
+
+  text-align: center;
+  
+  perspective: 800px;
+}
+
+.SmallWorld > * {
+  grid-area: 1 / 1 / 1 / 1;
+  backface-visibility: hidden;
+
+  a{
+    color: blue;
+    text-decoration: none;
+  }
+}
+
+.SmallWorld .front{
+  transition: transform 0.3s ease-out;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;  
+
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.5);
+
+  border: 1px solid black;
+
+  img{
+    width: 20vw;
+    height: 37vh;
+  }
+}
+
+.SmallWorld:hover .front{
+  transform: rotateY(180deg);
+}
+
+.SmallWorld .back{
+  transition: transform 0.3s ease-out;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;  
+
+  height: 100%;
+
+  background-color: rgba(255, 255, 255, 0.5);
+
+  border: 1px solid black;
+
+  img{
+    width: 20vw;
+    height: 32vh;
+  }
+}
+
+.SmallWorld:hover .back{
+  transform: rotateY(360deg);
+}
+
+
+.Escape{
+  display: inline-grid;
+  
+  text-align: center;
+
+  perspective: 800px;
+
+  padding: 0;
+  margin: 0;
+}
+
+.Escape > * {
+  grid-area: 1 / 1 / 1 / 1;
+  backface-visibility: hidden;
+
+  a{
+      color: blue;
+      text-decoration: none;
+  } 
+}
+
+.Escape .front{
+  transition: transform 0.3s ease-out;
+  transform: rotateX(0deg);
+  transform-style: preserve-3d;  
+
+  .front_1 {
+    display: flex;
+    justify-content: center;
+    
+    img {
+      height: 22.5vh;
+      border: 1px solid black;
+      border-bottom: none;
+    }
+  }
+
+  .front_2 {
+    display: inline-block;
+
+    background-color: rgba(255, 255, 255, 0.5);
+
+    border: 1px solid black;
+    border-top: none;
+  }
+}
+
+.Escape:hover .front{
+  transform: rotateX(180deg);
+}
+
+.Escape .back{
+  transition: transform 0.3s ease-out;
+  transform: rotateX(180deg);
+  transform-style: preserve-3d;  
+
+    img {
+      height: 30vh;
+      border: 1px solid black;
+    }
+}
+
+.Escape:hover .back{
+  transform: rotateX(360deg);
+}
+
