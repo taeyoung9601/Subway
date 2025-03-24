@@ -1,0 +1,42 @@
+.Total { 
+  background-image: url('./img/back_city.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+
+  position: relative;
+  display: flex;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80vh;
+}
+
+/* 저거 상위태그에 position: relative 랑 display: flex 넣고
+하위태그에 position: absolute 넣으면 됨 */
+
+.top {
+  position: absolute; 
+  display: flex;
+
+  width: 100%;
+  height: 50%;
+
+  top: 2%;
+  justify-content: space-around;
+}
+
+.bottom {
+  position: absolute; 
+  display: flex;
+
+  width: 100%;
+  height: 50%;
+
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+}
+

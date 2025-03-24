@@ -1,0 +1,15 @@
+.sinchon_main {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+  margin: 0;
+  padding: 0;
+  
+  font-size: min(1rem, 12px);
+
+  background: url(./img/back_city.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* outline: 1px solid red !important; */
+  }

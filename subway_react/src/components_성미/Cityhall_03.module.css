@@ -1,0 +1,44 @@
+
+/***** square_2: 정계천 *****/
+.square_2 :global(.text) {
+    position: absolute;
+    left: 0%;
+    top: 0;
+}
+[id="book_3_page"] {
+    position: absolute;
+    left: 0%;
+    top: 0;
+    transform-origin: 100% 50%;
+}
+.square_2 .front,
+.square_2 .back {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    transition: opacity .1s linear .5s, z-index .5s linear .5s;
+}
+.square_2 .front {
+    opacity: 1;
+}
+.square_2 .back {
+    transform: scaleX(-1);
+}
+.square_2 input:checked + :global(.horizontal_page) {
+    transform: rotateY(180deg);
+}
+.square_2 input:checked + :global(.horizontal_page) .front {
+    opacity: 0;
+}
+.square_2 input:checked + :global(.horizontal_page) .back {
+    opacity: 1;
+}
+
+
+
+

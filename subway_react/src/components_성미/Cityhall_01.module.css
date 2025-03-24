@@ -1,0 +1,48 @@
+
+/***** circle_1: 서울광장 *****/
+.circle_1 :global(.text) {
+    width: 35vh;
+    height: 35vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+}
+[id="book_1_page"] {
+    width: 35vh;
+    height: 35vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    transform-origin: 0% 100%;
+    overflow: hidden;
+}
+
+.circle_1 .front,
+.circle_1 .back {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    transition: opacity .1s linear .5s, z-index .5s linear .5s;
+}
+.circle_1 .front {
+    opacity: 1;
+}
+.circle_1 .back {
+    transform: scaleY(-1);
+}
+.circle_1 input:checked + :global(.vertical_page) {
+    transform: rotateX(-180deg);
+}
+.circle_1 input:checked + :global(.vertical_page) .front {
+    opacity: 0;
+}
+.circle_1 input:checked + :global(.vertical_page) .back {
+    opacity: 1;
+}

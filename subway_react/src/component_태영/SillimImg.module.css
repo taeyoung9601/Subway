@@ -1,0 +1,94 @@
+.sillim1, .sillim2, .sillim3, .sillim4{
+    position : absolute;
+    width: 40%;
+    height: 45%;
+    overflow: hidden;
+    border : 5px solid transparent;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.sillim1:hover,
+.sillim2:hover,
+.sillim3:hover,
+.sillim4:hover {
+    border : 5px solid rgba(255, 255, 255, 0.4);
+}
+
+.sillim1{
+    top : 2%;
+    left : 5%;
+    /* background: url(./img/sillim_타임스트림.jpg) */
+}
+
+
+.sillim2{
+    top : 2%;
+    left : 55%;
+}
+
+
+.sillim3{
+    top : 52%;
+    left : 5%;
+}
+
+.sillim4{
+    top : 52%;
+    left : 55%;
+}
+
+.img {
+    width: 102%;
+    /* height: 100%; */
+}
+
+.sillim_blur_layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 102%;
+    width: 102%;
+    height: 102%;
+    box-sizing: border-box;
+
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.sillim1:hover .sillim_blur_layer,
+.sillim2:hover .sillim_blur_layer,
+.sillim3:hover .sillim_blur_layer,
+.sillim4:hover .sillim_blur_layer {
+    opacity: 1; 
+    /* border : 5px solid rgba(255, 255, 255, 0.7); */
+}
+
+.sillim_p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* width: 55%;
+    height: 80%; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: bold;
+
+    text-align: center;
+    transition: opacity 0.5s ease;
+
+    word-break: keep-all;
+    white-space: pre-line;
+}
+

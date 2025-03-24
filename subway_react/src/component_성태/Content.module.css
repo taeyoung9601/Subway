@@ -1,0 +1,67 @@
+.Content1 {
+    display: flex;
+    position: relative;
+    word-break: keep-all;
+}
+
+.image1 {
+    width: 20vw;
+    border-radius: 10px;
+}
+
+/* =========================== */
+
+.Content2 {
+    display: flex;
+    position: relative;
+}
+
+.image2 {
+    width: 50vw;
+    border-radius: 10px;
+}
+
+/* =========================== */
+
+.Content3 {
+    display: flex;
+    position: relative;
+}
+
+.image3 {
+    width: 21vw;
+    height: 33vh;
+    border-radius: 10px;
+}
+
+/* =========================== */
+
+.Content4 {
+    display: flex;
+    position: relative;
+}
+
+.image4 {
+    width: 21vw;
+    height: 33vh;
+    border-radius: 10px;
+}
+
+/* =========================== */
+
+.Content1:hover,
+.Content2:hover,
+.Content3:hover,
+.Content4:hover {
+  filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.4));
+  transform: scale(1.02);
+  transition: transform 0.4s ease;
+}
+
+.Content1:hover:has(:global(.text1)),
+.Content2:hover:has(:global(.text2)),
+.Content3:hover:has(:global(.text3)),
+.Content4:hover:has(:global(.text4)) {
+  transform: scale(1);
+  filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0));
+}

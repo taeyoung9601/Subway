@@ -1,0 +1,211 @@
+
+.background {
+    position: absolute;
+    background-image: url('./img/back_city.png'); 
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+}
+
+.front_traffic {
+    background-image: url(./img/gangnam_img_2.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.front_food{
+    background-image: url(./img/gangnam_img_3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.front_night {
+    background-image: url(./img/gangnam_img_4.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.front_beauty {
+    background-image: url(./img/gangnam_img_5.png);
+    background-size: cover;
+    background-position: center;
+}
+
+/* 뒤집기 */s
+
+
+.gangnam_1 .front_traffic,
+.gangnam_2 .front_food,
+.gangnam_3 .front_night,
+.gangnam_4 .front_beauty{
+    transition: transform 0.3s ease-out;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;  
+  
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+.gangnam_1:hover .front_traffic,
+.gangnam_2:hover .front_food,
+.gangnam_3:hover .front_night,
+.gangnam_4:hover .front_beauty {
+transform: rotateY(-180deg);
+}
+
+.gangnam_1 .back_traffic,
+.gangnam_2 .back_food,
+.gangnam_3 .back_night,
+.gangnam_4 .back_beauty {
+
+transition: transform 0.3s ease-out;
+transform: rotateY(180deg);
+transform-style: preserve-3d;  
+opacity: 1;
+
+justify-content: center;
+align-items: center;
+}
+
+.gangnam_1:hover .back_traffic,
+.gangnam_2:hover .back_food,
+.gangnam_3:hover .back_night,
+.gangnam_4:hover .back_beauty {
+transition: transform 0.3s ease-out;
+transform: rotateY(0deg);
+background-color: white;
+opacity: 0.9;
+}
+
+.gangnam_1:hover .back_traffic .traffic_h2,
+.gangnam_1:hover .back_traffic .traffic_p,
+.gangnam_2:hover .back_food .food_h2,
+.gangnam_2:hover .back_food .food_p,
+.gangnam_3:hover .back_night .night_h2,
+.gangnam_3:hover .back_night .night_p,
+.gangnam_4:hover .back_beauty .beauty_h2,
+.gangnam_4:hover .back_beauty .beauty_p {
+transition: transform 0.3s ease-out;
+opacity: 1;
+text-align: left;
+
+}
+
+/* hover 해제 시 배경 이미지 더 빨리 복원 */
+
+.gangnam_1 .front_traffic,
+.gangnam_1 .back_traffic,
+.gangnam_2 .front_food,
+.gangnam_2 .back_food,
+.gangnam_3 .front_night,
+.gangnam_3 .back_night,
+.gangnam_4 .front_beauty,
+.gangnam_4 .back_beauty {
+    transition: background-color 0.2s ease-in, 
+    transform 0.3s ease-out; 
+}
+
+.gangnam_1,
+.gangnam_2,
+.gangnam_3,
+.gangnam_4 {
+    display: inline-block;
+    transition: transform 0.3s;
+    transform: perspective(800px) rotateY(0deg);
+    transform-style: preserve-3d;
+    
+}
+
+
+/* 합치기 */
+
+.gangnam_1,
+.gangnam_2,
+.gangnam_3,
+.gangnam_4  {
+    display: inline-grid;
+    transition: transform 0.5s ease-in-out;
+    transform: perspective(800px) rotateY(0deg);
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+  
+.gangnam_1 > * ,
+.gangnam_2 > * ,
+.gangnam_3 > * ,
+.gangnam_4 > * {
+    margin: 10px;
+    grid-area: 1 / 1 / 1 / 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+
+    width: 510px;
+    height: 30vh;
+    padding: 15px;
+
+    backface-visibility: hidden;
+    transform-origin: center center;
+    will-change: transform; /* GPU 렌더링 활성화 */
+}
+
+
+/* 위치 */
+
+
+
+.gangnam_1 {
+    position: absolute;
+    top : 5%;
+    left: 19%;
+}
+
+.gangnam_2 {
+    position: absolute;
+    text-align: initial;
+    top : 5%;
+    left: 52%;
+}
+
+.gangnam_3 {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+}
+.gangnam_4 {
+    position: absolute;
+    text-align: initial;
+    top: 50%;
+    right: 48%;
+}
+
+.traffic_h1,
+.food_h1,
+.night_h1,
+.beauty_h1 {
+    background-color: white;
+    opacity: 0.7;
+    width: 270px;
+    text-align: left;
+}
+
+
+.traffic_h2,
+.food_h2,
+.night_h2,
+.beauty_h2 {
+    background-color: white;
+    opacity: 0.7;
+    width: 270px;
+    text-align: left;
+}
+
+.traffic_p,
+.food_p,
+.night_p,
+.beauty_p {
+    margin-top: 20%;
+    text-align: left;
+    word-break: keep-all;
+} 
+

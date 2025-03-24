@@ -1,0 +1,73 @@
+.Escape{
+    display: inline-grid;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    
+    perspective: 800px;
+  
+    padding: 0;
+    margin: 0;
+  }
+  
+  .Escape > * {
+    grid-area: 1 / 1 / 1 / 1;
+    backface-visibility: hidden;
+    
+    a{
+        color: blue;
+        text-decoration: none;
+    } 
+  }
+  
+  .front{
+    transition: transform 0.3s ease-out;
+    transform: rotateX(0deg);
+    transform-style: preserve-3d;  
+
+  }
+
+  .front_1 {
+    display: flex;
+    justify-content: center;
+    
+    img {
+      height: 22.6vh;
+      border: 1px solid black;
+      border-bottom: none;
+    }
+  }
+
+  .front_2 {
+    display: inline-block;
+
+    background-color: rgba(255, 255, 255, 0.5);
+
+    border: 1px solid black;
+    border-top: none;
+  }
+  
+  .Escape:hover .front{
+    transform: rotateX(180deg);
+  }
+  
+ .back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: transform 0.3s ease-out;
+    transform: rotateX(180deg);
+    transform-style: preserve-3d;  
+
+    border: 1px solid black;
+
+    img {
+      height: 30vh;
+    }
+  }
+  
+  .Escape:hover .back{
+    transform: rotateX(360deg);
+  }

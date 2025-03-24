@@ -1,0 +1,49 @@
+
+/***** circle_2: 미술관 *****/
+.circle_2 :global(.text) {
+    width: 35vh;
+    height: 35vh;
+    position: absolute;
+    left: 0;
+    top: 35vh;
+    border-radius: 50%;
+}
+[id="book_4_page"] {
+    width: 35vh;
+    height: 35vh;
+    position: absolute;
+    left: 0;
+    top: 35vh;
+    border-radius: 50%;
+    transform-origin: 0% 0%;
+    overflow: hidden;
+}
+
+.circle_2 .front,
+.circle_2 .back {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    transition: opacity .1s linear .5s, z-index .5s linear .5s;
+}
+
+.circle_2 .front {
+    opacity: 1;
+}
+.circle_2 .back {
+    transform: scaleY(-1);
+}
+.circle_2 input:checked + :global(.vertical_page) {
+    transform: rotateX(180deg);
+}
+.circle_2 input:checked + :global(.vertical_page) .front {
+    opacity: 0;
+}
+.circle_2 input:checked + :global(.vertical_page) .back {
+    opacity: 1;
+}

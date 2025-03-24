@@ -1,0 +1,22 @@
+.TOtal {
+    display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 80vh;
+  box-sizing: border-box;
+  padding: 2% 0;
+  
+  background-image: url('./img/back_city.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.Con3Plus4 {
+    word-break: keep-all;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

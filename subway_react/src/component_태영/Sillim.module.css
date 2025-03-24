@@ -1,0 +1,51 @@
+.sillim_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 80vh;
+
+    background-image: url('./img/back_city.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.modal {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.3s;
+}
+
+.modal_content {
+    position: absolute;
+    background: rgb(255, 250, 246);
+    padding:min(20px, 8%);
+    border-radius: 15px;
+    color: black; 
+    box-sizing: border-box;
+    overflow: hidden;
+
+    font-size: 1.2rem;
+
+    width: 30%;
+    height: 30%;
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+    word-break: keep-all;
+    white-space: pre-line;
+
+}
+

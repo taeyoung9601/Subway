@@ -1,0 +1,79 @@
+.text1 {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 5%;
+  height: 30%;
+  width: 20vw;
+  bottom: 0;
+  opacity: 0;
+  line-height: 1.3rem;
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.text2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 4% 7%;
+  height: 50%;
+  width: 50vw;
+  bottom: 0;
+  border-radius: 10px;
+  opacity: 0;
+  word-break: keep-all;
+  line-height: 1.7rem;
+  font-size: max(0.9rem, 18px);
+  pointer-events: none;
+}
+
+.text3 {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 3% 7%;
+  bottom: 0;
+  opacity: 0;
+  line-height: 1.3rem;
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+.text4 {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 5%;
+  bottom: 0;
+  opacity: 0;
+  line-height: 1.3rem;
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+.text1,
+.text2,
+.text3,
+.text4 {
+  animation: down-up 0.4s linear forwards;
+}
+
+@keyframes down-up {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+} 

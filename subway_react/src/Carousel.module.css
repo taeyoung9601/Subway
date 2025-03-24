@@ -1,0 +1,91 @@
+/* 현재 내가 보고 있는 화면 */
+.window { 
+position: relative;
+width: 100vw;
+height: 80vh;
+
+}
+
+/* 모든 컨텐츠의 합의 크기 */
+.container {
+position: relative;
+display: inline;
+
+}
+
+
+.button_container {
+   display: flex;
+   height: 20vh;
+ 
+   /* 좌우 위치 */
+   justify-content: center;
+   /* 상하 위치 */
+   align-items: center;
+   gap: 1%;
+ 
+   background-image: url('./img/subwayContainerImg.png');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+ }
+ 
+ button {
+   font-size: 30px;
+ 
+   height: 50px;
+   width: 50px;
+   color: #1f1f1f;
+   background-color: rgba(0, 0, 0, 0);
+ 
+   border-radius: 50%;
+   border: none;
+   cursor: auto;
+   transition: background-color 0.5s linear, color 0.5s linear;
+ }
+ 
+ button:hover {
+   color: white;
+   background-color: #1f1f1f;
+ }
+ 
+ button:hover i{
+   transform: rotateX(180deg);
+   transition: transform 0.5s linear;
+ }
+ 
+ .window_train {
+   width: 35%;
+   height: 70%;
+ 
+   overflow: hidden;
+ 
+   display: flex;
+   position: relative;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+ 
+   background-color: white;
+ 
+   border: .5px solid #00A84D;
+   border-radius: 10px;
+   box-shadow: inset 5px 5px 10px 0px rgba(0,0,0,0.3);
+
+   pointer-events: none;
+ }
+ 
+ .green_line {
+   width: 35%;  
+   height: 5px;
+   position: fixed;
+ 
+   background-color: #00A84D;
+   border: none;
+ }
+ 
+ .container_subway {
+   position: absolute;
+   width: 100%; 
+   max-height: 60%;
+ }
